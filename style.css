@@ -1,0 +1,289 @@
+:root {
+    /* Jouw originele kleurenpalet */
+    --dark-green: #1a3c34;  /* Hoofdkleur: Nav, Footer, Calculator */
+    --peach: #f2d8c9;       /* Achtergrond: Tarieven, Accent */
+    --terracotta: #b38264;  /* Knoppen, Highlights */
+    --white: #ffffff;
+    --text-dark: #333;
+    --font-main: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+/* --- Navigatie --- */
+.navbar {
+    background-color: var(--dark-green) !important; /* Forceer groen over Bootstrap heen */
+    padding: 15px 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--white) !important;
+}
+
+.logo span {
+    color: var(--peach);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: var(--peach) !important;
+}
+
+/* Contact knop in menu */
+.btn-contact {
+    background-color: var(--terracotta);
+    color: white !important;
+    border-radius: 20px;
+    padding: 8px 20px !important;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #966b52; /* Iets donkerder terracotta */
+}
+
+/* --- Hero Sectie --- */
+#hero {
+    min-height: 60vh;
+    /* Jouw originele foto + groene overlay */
+    background: linear-gradient(rgba(26,60,52,0.8), rgba(26,60,52,0.8)), url('https://static.vecteezy.com/system/resources/thumbnails/049/001/223/small/the-serene-ocean-under-a-mesmerizing-sunset-sky-painted-in-pink-and-turquoise-creates-a-tranquil-atmosphere-photo.jpg#/?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+#hero h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Algemene Knoppen */
+.btn-custom {
+    display: inline-block;
+    background-color: var(--terracotta);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: transform 0.2s;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #966b52;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* --- Secties Algemeen --- */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+/* --- Over Mij --- */
+.highlight-box {
+    background-color: var(--terracotta);
+    color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.highlight-box .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* --- Tarieven Sectie --- */
+/* De achtergrondkleur van de hele sectie moet Peach zijn */
+.bg-light-custom {
+    background-color: var(--peach) !important;
+}
+
+/* Prijs Kaarten */
+.price-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-card.featured {
+    border: 2px solid var(--terracotta);
+}
+
+.price-card h3 {
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.price-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-green); /* Groene prijs */
+    margin: 0;
+}
+
+.price-card .price span {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.badge-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--terracotta);
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* --- Calculator (Jouw groene stijl) --- */
+.calculator-box {
+    background-color: var(--dark-green); /* Groene achtergrond */
+    color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Inputs in de calculator (Peach background) */
+.calculator-box .form-label {
+    color: var(--white);
+}
+
+.calculator-box .custom-input {
+    background-color: var(--peach);
+    border: none;
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.calculator-box .custom-input:focus {
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(242, 216, 201, 0.5);
+}
+
+.calculator-box hr {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.final-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--peach); /* Perzik kleur voor de prijs */
+}
+
+.alert-custom {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--peach);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* --- Werktijden --- */
+.note-box {
+    background-color: #fafafa;
+    border-left: 5px solid var(--terracotta);
+    padding: 20px;
+    font-style: italic;
+    color: #555;
+    border-radius: 5px;
+}
+
+/* --- Contact Footer & Formulier --- */
+#contact {
+    background-color: var(--dark-green);
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.contact-wrapper {
+    background-color: var(--dark-green);
+    padding: 80px 0;
+}
+
+/* Linkerkant Contact (Donkergroen) */
+.contact-info-side {
+    background-color: #142f29; /* Iets donkerder groen voor contrast */
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-side h3 {
+    color: var(--peach);
+}
+
+.info-item .icon {
+    background: rgba(242, 216, 201, 0.2); /* Transparant peach */
+    color: var(--peach);
+}
+
+/* Rechterkant Contact (Wit Formulier) */
+.contact-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Footer onderkant */
+.contact-links .contact-item {
+    border-color: rgba(255,255,255,0.3);
+    color: var(--peach);
+}
+
+.contact-links .contact-item:hover {
+    background-color: var(--peach);
+    color: var(--dark-green);
+    border-color: var(--peach);
+}
+
+.copyright {
+    color: rgba(255,255,255,0.5);
+    margin-top: 30px;
+}
