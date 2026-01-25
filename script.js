@@ -76,3 +76,56 @@ endInput.addEventListener('input', calculatePrice);
 
 // Start de berekening direct 1 keer bij het laden
 calculatePrice();
+
+//---------Code Pop-up Forms---------//
+
+// Selecteer het formulier
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        // 1. Voorkom dat de pagina herlaadt/redirect
+        e.preventDefault();
+
+        // Verander knop tekst zodat men weet dat er iets gebeurt
+        const originalBtnText = submitBtn.innerText;
+        submitBtn.innerText = "Versturen...";
+        submitBtn.disabled = true;
+
+        // 2. Verzamel de data
+        const formData = new FormData(contactForm);
+
+        // 3. Verstuur via AJAX (Fetch API)
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json' // Dit zorgt dat Formsubmit JSON teruggeeft ipv een redirect
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // 4. Succes! Toon de modal
+                const myModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+                myModal.show();
+                
+                // Maak formulier leeg
+                contactForm.reset();
+            } else {
+                // Er ging iets mis bij Formsubmit
+                alert("Oeps! Er is iets misgegaan bij het versturen. Probeer het later nog eens.");
+            }
+        })
+        .catch(error => {
+            // Netwerkfout
+            console.error('Fout:', error);
+            alert("Er is een netwerkfout opgetreden. Controleer je verbinding.");
+        })
+        .finally(() => {
+            // Zet de knop altijd weer terug naar normaal
+            submitBtn.innerText = originalBtnText;
+            submitBtn.disabled = false;
+        });
+    });
+}
