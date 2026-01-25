@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;display=swap');
+      .logo-text {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 28px; /* Iets kleiner om netjes te passen */
+      }
+    </style>
+  </defs>
+  <text x="25" y="36" class="logo-text" text-anchor="middle">
+    <tspan fill="#ffffff">M</tspan><tspan fill="#f2d8c9">T</tspan>
+  </text>
+</svg>

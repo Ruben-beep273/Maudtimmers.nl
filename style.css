@@ -1,8 +1,8 @@
 :root {
-    /* Jouw originele kleurenpalet */
-    --dark-green: #1a3c34;  /* Hoofdkleur: Nav, Footer, Calculator */
-    --peach: #f2d8c9;       /* Achtergrond: Tarieven, Accent */
-    --terracotta: #b38264;  /* Knoppen, Highlights */
+    /* Jouw vaste kleurenpalet */
+    --dark-green: #1a3c34;
+    --peach: #f2d8c9;
+    --terracotta: #b38264;
     --white: #ffffff;
     --text-dark: #333;
     --font-main: 'Poppins', sans-serif;
@@ -11,19 +11,21 @@
 body {
     font-family: var(--font-main);
     color: var(--text-dark);
-    background-color: var(--white);
+    background-color: #fafafa; /* Iets zachter dan puur wit */
 }
 
 /* --- Navigatie --- */
 .navbar {
-    background-color: var(--dark-green) !important; /* Forceer groen over Bootstrap heen */
+    background-color: var(--dark-green) !important;
     padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .logo {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--white) !important;
+    letter-spacing: -0.5px;
 }
 
 .logo span {
@@ -32,31 +34,34 @@ body {
 
 .nav-link {
     color: rgba(255, 255, 255, 0.9) !important;
-    margin: 0 10px;
+    margin: 0 8px;
     font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
     color: var(--peach) !important;
 }
 
-/* Contact knop in menu */
 .btn-contact {
     background-color: var(--terracotta);
     color: white !important;
-    border-radius: 20px;
-    padding: 8px 20px !important;
+    border-radius: 25px;
+    padding: 8px 25px !important;
     transition: 0.3s;
+    font-weight: 600;
 }
 
 .btn-contact:hover {
-    background-color: #966b52; /* Iets donkerder terracotta */
+    background-color: #d68c6d; /* Iets lichter bij hover */
+    transform: translateY(-2px);
 }
 
 /* --- Hero Sectie --- */
 #hero {
-    min-height: 60vh;
-    /* Jouw originele foto + groene overlay */
+    min-height: 65vh;
+    /* Foto met overlay */
     background: linear-gradient(rgba(26,60,52,0.8), rgba(26,60,52,0.8)), url('https://static.vecteezy.com/system/resources/thumbnails/049/001/223/small/the-serene-ocean-under-a-mesmerizing-sunset-sky-painted-in-pink-and-turquoise-creates-a-tranquil-atmosphere-photo.jpg#/?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
@@ -64,10 +69,12 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--white);
+    margin-top: 70px; /* Ruimte voor de fixed navbar */
 }
 
 #hero h1 {
     font-weight: 700;
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
@@ -76,90 +83,99 @@ body {
     display: inline-block;
     background-color: var(--terracotta);
     color: white;
-    padding: 12px 30px;
+    padding: 14px 35px;
     border-radius: 30px;
     text-decoration: none;
-    margin-top: 20px;
-    transition: transform 0.2s;
+    margin-top: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
     border: none;
+    box-shadow: 0 4px 15px rgba(179, 130, 100, 0.4);
 }
 
 .btn-custom:hover {
-    background-color: #966b52;
-    transform: scale(1.05);
+    background-color: #c48b6e;
+    transform: translateY(-3px);
     color: white;
 }
 
 /* --- Secties Algemeen --- */
 .section-padding {
-    padding: 80px 0;
+    padding: 90px 0;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
-    font-weight: 600;
+    margin-bottom: 60px;
+    font-weight: 700;
     color: var(--dark-green);
+    position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
 /* --- Over Mij --- */
 .highlight-box {
     background-color: var(--terracotta);
     color: var(--white);
-    padding: 30px;
-    border-radius: 15px;
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(179, 130, 100, 0.3);
 }
 
 .highlight-box .icon {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
 }
 
 /* --- Tarieven Sectie --- */
-/* De achtergrondkleur van de hele sectie moet Peach zijn */
 .bg-light-custom {
-    background-color: var(--peach) !important;
+    background-color: #fff8f5; /* Heel licht perzik-wit voor contrast */
 }
 
 /* Prijs Kaarten */
 .price-card {
     background: white;
-    padding: 40px;
-    border-radius: 15px;
+    padding: 40px 30px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-    border: 1px solid rgba(0,0,0,0.05);
+    /* Randje toegevoegd voor definitie */
+    border: 2px solid rgba(242, 216, 201, 0.5); 
+    box-shadow: 0 10px 25px rgba(26, 60, 52, 0.05);
+    transition: transform 0.3s, border-color 0.3s;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
 
 .price-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    border-color: var(--terracotta);
 }
 
 .price-card.featured {
     border: 2px solid var(--terracotta);
+    background: linear-gradient(to bottom, #fff, #fffbf9);
 }
 
 .price-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--dark-green);
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .price-card .price {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    color: var(--dark-green); /* Groene prijs */
-    margin: 0;
+    color: var(--terracotta);
+    margin: 10px 0;
 }
 
 .price-card .price span {
     font-size: 1rem;
-    color: #666;
+    color: #999;
     font-weight: 400;
 }
 
@@ -170,85 +186,118 @@ body {
     transform: translateX(-50%);
     background: var(--terracotta);
     color: white;
-    padding: 5px 15px;
+    padding: 8px 20px;
     font-size: 0.8rem;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    font-weight: 600;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
-/* --- Calculator (Jouw groene stijl) --- */
+/* --- Calculator (FIXED) --- */
+.calculator-wrapper {
+    margin-top: 60px;
+}
+
 .calculator-box {
-    background-color: var(--dark-green); /* Groene achtergrond */
-    color: var(--white);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: var(--dark-green);
+    color: var(--white); /* Zorgt dat alle standaard tekst wit is */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(26, 60, 52, 0.25);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Inputs in de calculator (Peach background) */
+.calculator-box h3 {
+    color: var(--peach);
+    font-weight: 700;
+}
+
 .calculator-box .form-label {
-    color: var(--white);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
 }
 
+/* Invulvelden mooi maken */
 .calculator-box .custom-input {
     background-color: var(--peach);
-    border: none;
+    border: 2px solid transparent;
     color: var(--dark-green);
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    padding: 10px 15px;
+    text-align: center;
 }
 
 .calculator-box .custom-input:focus {
     background-color: #fff;
-    box-shadow: 0 0 0 3px rgba(242, 216, 201, 0.5);
+    border-color: var(--terracotta);
+    box-shadow: none;
 }
 
-.calculator-box hr {
-    border-color: rgba(255,255,255,0.2);
+/* Tijdkiezer icoontje kleur aanpassen (werkt in chrome/edge) */
+.calculator-box .custom-input::-webkit-calendar-picker-indicator {
+    filter: invert(15%) sepia(16%) saturate(1005%) hue-rotate(119deg) brightness(28%) contrast(90%);
+    cursor: pointer;
 }
 
+.custom-divider {
+    border-color: rgba(255,255,255,0.15);
+    opacity: 1;
+}
+
+/* De totaalprijs styling */
 .final-price {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: var(--peach); /* Perzik kleur voor de prijs */
+    color: var(--peach) !important; /* Forceer perzik kleur */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+#totalHours {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.2rem;
 }
 
 .alert-custom {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--terracotta);
     color: var(--peach);
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 10px;
     text-align: center;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 /* --- Werktijden --- */
 .note-box {
-    background-color: #fafafa;
-    border-left: 5px solid var(--terracotta);
-    padding: 20px;
+    background-color: #fff;
+    border-left: 6px solid var(--terracotta);
+    padding: 30px;
     font-style: italic;
     color: #555;
-    border-radius: 5px;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    font-size: 1.05rem;
 }
 
-/* --- Contact Footer & Formulier --- */
-#contact {
-    background-color: var(--dark-green);
-    color: white;
-    padding-top: 60px;
-    padding-bottom: 20px;
-}
-
+/* --- Contact Formulier Sectie --- */
 .contact-wrapper {
     background-color: var(--dark-green);
-    padding: 80px 0;
+    padding: 100px 0 80px 0;
+    position: relative;
 }
 
-/* Linkerkant Contact (Donkergroen) */
+.contact-card {
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: white;
+    border: 4px solid rgba(255,255,255,0.1); /* Rand om de hele kaart */
+}
+
+/* Linkerkant Contact */
 .contact-info-side {
-    background-color: #142f29; /* Iets donkerder groen voor contrast */
+    background-color: #122e27; /* Iets donkerder dan main groen */
     color: white;
     padding: 50px;
     display: flex;
@@ -257,33 +306,113 @@ body {
 
 .contact-info-side h3 {
     color: var(--peach);
+    font-weight: 700;
 }
 
 .info-item .icon {
-    background: rgba(242, 216, 201, 0.2); /* Transparant peach */
+    background: rgba(242, 216, 201, 0.15);
     color: var(--peach);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
 }
 
-/* Rechterkant Contact (Wit Formulier) */
-.contact-card {
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: white;
-}
-
-/* Footer onderkant */
-.contact-links .contact-item {
-    border-color: rgba(255,255,255,0.3);
-    color: var(--peach);
-}
-
-.contact-links .contact-item:hover {
-    background-color: var(--peach);
+/* Rechterkant Formulier */
+.contact-card form .form-label {
     color: var(--dark-green);
-    border-color: var(--peach);
+    font-weight: 600;
 }
 
-.copyright {
-    color: rgba(255,255,255,0.5);
-    margin-top: 30px;
+.contact-card .custom-input {
+    background-color: #f9f9f9;
+    border: 2px solid #eee;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.contact-card .custom-input:focus {
+    background-color: white;
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 4px rgba(179, 130, 100, 0.1);
+}
+
+/* --- Footer --- */
+footer#footer-simple {
+    background-color: #0e241f; /* Zeer donker groen */
+    color: rgba(255,255,255,0.4);
+    padding: 30px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* --- Single Rate Card Styling --- */
+
+/* De kaart zelf iets breder en prominenter */
+.price-card.single-rate {
+    border: 3px solid var(--peach); /* Iets dikkere rand */
+    background: linear-gradient(to bottom, #ffffff, #fffbf9);
+    padding: 50px 30px;
+    max-width: 650px; /* Zorgt dat hij niet té breed wordt op grote schermen */
+    margin: 0 auto;
+}
+
+/* De prijs lekker groot */
+.price-card.single-rate .price {
+    font-size: 3.5rem;
+    color: var(--dark-green);
+    margin-bottom: 5px;
+}
+
+/* Het blokje voor de toeslag */
+.surcharge-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    background-color: rgba(242, 216, 201, 0.3); /* Zeer lichte peach achtergrond */
+    padding: 15px 25px;
+    border-radius: 50px; /* Pil-vorm */
+    display: inline-flex; /* Zorgt dat het blokje niet breder is dan de inhoud */
+}
+
+/* Het pijltje */
+.icon-arrow {
+    font-size: 1.5rem;
+    color: var(--terracotta);
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* De tekst van de toeslag */
+.surcharge-text {
+    text-align: left;
+    font-size: 1.1rem;
+    color: var(--dark-green);
+    line-height: 1.2;
+}
+
+.surcharge-text .highlight {
+    color: var(--terracotta);
+    font-weight: 700;
+}
+
+.surcharge-text small {
+    font-size: 0.85rem;
+    margin-top: 2px;
+}
+
+/* Mobiele aanpassing: onder elkaar als het scherm te smal is */
+@media (max-width: 450px) {
+    .price-card.single-rate .price {
+        font-size: 2.8rem;
+    }
+    .surcharge-block {
+        padding: 15px;
+        border-radius: 15px;
+    }
 }

@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oppassen met Maud | Dreumel</title>
-    
+    <link rel="icon" type="image/x-icon" href="/Afbeeldingen/favicon.ico">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand logo" href="#">Maud<span>Timmers</span></a>
+            <a class="navbar-brand logo" href="#hero">Maud<span>Timmers</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
@@ -41,8 +44,12 @@
             <h2 class="section-title">Over mij</h2>
             <div class="row align-items-center g-5">
                 <div class="col-lg-7">
-                    <p>Ik ben Maud, 20 jaar oud, en ik zit in het derde jaar van PABO-ALO in Eindhoven. Deze opleiding bereidt me voor op het worden van een docent, zowel in het klaslokaal als in de gymzaal.</p>
-                    <p>Mijn passie ligt bij het werken met kinderen. Ik heb uitgebreide ervaring in het omgaan met kinderen, en ik haal veel voldoening uit dit werk. Oppassen sluit daarom perfect aan bij mijn interesses!</p>
+                    <p class="lead mb-4">Hoi! Ik ben Maud, 20 jaar oud, en ik zit in het derde jaar van de PABO-ALO in
+                        Eindhoven.</p>
+                    <p>Deze opleiding bereidt me voor op het worden van een docent, zowel in het klaslokaal als in de
+                        gymzaal. Mijn passie ligt bij het werken met kinderen. Ik heb uitgebreide ervaring in het omgaan
+                        met kinderen, en ik haal veel voldoening uit dit werk. Oppassen sluit daarom perfect aan bij
+                        mijn interesses!</p>
                 </div>
                 <div class="col-lg-5">
                     <div class="highlight-box">
@@ -54,70 +61,69 @@
         </div>
     </section>
 
-    <section id="tarieven" class="section-padding bg-light-custom">
-        <div class="container">
-            <h2 class="section-title">Tarieven</h2>
-            
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-5 col-lg-4 mb-4">
-                    <div class="price-card">
-                        <h3>Standaard</h3>
-                        <p class="price">€11,00<span>/uur</span></p>
-                        <p class="desc">Tot 00:00 uur</p>
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8 col-lg-6">
+            <div class="price-card single-rate">
+                <h3>Mijn Tarief</h3>
+
+                <div class="price-container">
+                    <p class="price">€11,00<span>/uur</span></p>
+                </div>
+
+                <div class="surcharge-block">
+                    <div class="icon-arrow">↳</div>
+                    <div class="surcharge-text">
+                        <span class="highlight">+ €1,00</span> toeslag na 00:00 uur
+                        <small class="d-block text-muted fw-normal">(Nachttarief: €12,00/uur)</small>
                     </div>
                 </div>
-                <div class="col-md-5 col-lg-4 mb-4">
-                    <div class="price-card featured">
-                        <div class="badge-top">Meest gekozen</div>
-                        <h3>Nacht</h3>
-                        <p class="price">€12,00<span>/uur</span></p>
-                        <p class="desc">Na 00:00 uur (+€1,00)</p>
-                    </div>
-                </div>
+
             </div>
+        </div>
+    </div>
 
-            <div class="calculator-wrapper">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="text-center mb-4">
-                            <p><strong>Minimumbetaling: 2 uur (€22) per oppassessie.</strong></p>
-                            <p class="small text-muted">Ik geloof in transparantie. Heb je vragen? Ik sta altijd open voor overleg.</p>
+    <div class="calculator-wrapper">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="calculator-box">
+                    <h3 class="mb-4 text-center">Bereken je kosten</h3>
+
+                    <p class="text-center mb-4 small opacity-75">
+                        Minimumbetaling: 2 uur (€22). Ik geloof in transparantie.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <label class="form-label">Begintijd</label>
+                            <input type="time" id="startTime" class="form-control custom-input" value="19:00">
                         </div>
-
-                        <div class="calculator-box">
-                            <h3 class="mb-4 text-center">Bereken je kosten</h3>
-                            <div class="row g-3">
-                                <div class="col-6">
-                                    <label class="form-label">Begintijd</label>
-                                    <input type="time" id="startTime" class="form-control custom-input" value="19:00">
-                                </div>
-                                <div class="col-6">
-                                    <label class="form-label">Eindtijd</label>
-                                    <input type="time" id="endTime" class="form-control custom-input" value="23:30">
-                                </div>
-                            </div>
-                            
-                            <hr class="my-4 custom-divider">
-
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="text-muted">Totaal: </span>
-                                    <span id="totalHours" class="fw-bold">0u 0m</span>
-                                </div>
-                                <div class="text-end">
-                                    <span class="text-muted">Geschatte kosten:</span>
-                                    <div id="totalPrice" class="final-price">€ 0,00</div>
-                                </div>
-                            </div>
-                            
-                            <div id="min-msg" class="alert-custom mt-3" style="display: none;">
-                                * Minimumtarief van €22 wordt toegepast
-                            </div>
+                        <div class="col-6">
+                            <label class="form-label">Eindtijd</label>
+                            <input type="time" id="endTime" class="form-control custom-input" value="23:30">
                         </div>
+                    </div>
+
+                    <hr class="my-4 custom-divider">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="d-block text-white opacity-75">Totaal tijd:</span>
+                            <span id="totalHours" class="fw-bold fs-4">0u 0m</span>
+                        </div>
+                        <div class="text-end">
+                            <span class="d-block text-white opacity-75">Geschatte kosten:</span>
+                            <div id="totalPrice" class="final-price">€ 0,00</div>
+                        </div>
+                    </div>
+
+                    <div id="min-msg" class="alert-custom mt-3" style="display: none;">
+                        * Minimumtarief van €22 wordt toegepast
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </section>
 
     <section id="werktijden" class="section-padding">
@@ -125,98 +131,102 @@
             <h2 class="section-title">Werktijden</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <p class="text-center mb-4">Ik ben beschikbaar op flexibele tijden, inclusief avonden en weekenden. Ook voor last-minute aanvragen mag je me contacten.</p>
-                    
+                    <p class="text-center mb-5 lead">Ik ben beschikbaar op flexibele tijden, inclusief avonden en
+                        weekenden. Ook voor last-minute aanvragen mag je me contacten.</p>
+
                     <blockquote class="note-box">
-                        Gezien mijn veeleisende HBO-studie, kan het voorkomen dat ik niet altijd beschikbaar ben vanwege studieverplichtingen. Daarom is het altijd het beste om van tevoren te overleggen. Bedankt voor je begrip!
+                        <strong>Let op:</strong> Gezien mijn veeleisende HBO-studie, kan het voorkomen dat ik niet
+                        altijd beschikbaar ben vanwege studieverplichtingen. Daarom is het altijd het beste om van
+                        tevoren te overleggen. Bedankt voor je begrip!
                     </blockquote>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact-section" class="contact-wrapper">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="contact-card shadow-lg">
-                    <div class="row g-0">
-                        
-                        <div class="col-md-5 contact-info-side">
-                            <h3>Contact</h3>
-                            <p class="mb-4">Heb je vragen of wil je kennismaken? Vul het formulier in of stuur direct een berichtje.</p>
-                            
-                            <div class="info-item">
-                                <span class="icon">📱</span>
-                                <div>
-                                    <strong>WhatsApp</strong>
-                                    <a href="https://wa.me/31646471139" class="d-block text-white">+31 6 46471139</a>
-                                </div>
-                            </div>
-                            
-                            <div class="info-item mt-4">
-                                <span class="icon">📧</span>
-                                <div>
-                                    <strong>Email</strong>
-                                    <a href="mailto:Maudtimmers7@gmail.com" class="d-block text-white">Maudtimmers7@gmail.com</a>
+    <section id="contact" class="contact-wrapper">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="contact-card shadow-lg">
+                        <div class="row g-0">
+
+                            <div class="col-md-5 contact-info-side">
+                                <h3>Contact</h3>
+                                <p class="mb-4 opacity-75">Heb je vragen of wil je kennismaken? Vul het formulier in of
+                                    stuur direct een berichtje.</p>
+
+                                <div class="d-flex flex-column gap-4 mt-2">
+                                    <div class="info-item">
+                                        <span class="icon">📱</span>
+                                        <div>
+                                            <strong class="d-block text-white-50 small">WhatsApp</strong>
+                                            <a href="https://wa.me/31646471139" class="d-block text-white fs-5">+31 6
+                                                46471139</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <span class="icon">📧</span>
+                                        <div>
+                                            <strong class="d-block text-white-50 small">Email</strong>
+                                            <a href="mailto:Maudtimmers7@gmail.com"
+                                                class="d-block text-white fs-5">Maudtimmers7@gmail.com</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="mt-auto pt-5">
-                                <small class="opacity-50">&copy; 2024 Maud Timmers</small>
+                            <div class="col-md-7 p-5 bg-white">
+                                <h3 class="text-dark mb-4">Stuur een bericht</h3>
+
+                                <form action="https://formsubmit.co/oppas@maudtimmers.nl" method="POST">
+                                    <input type="text" name="_honey" style="display:none">
+                                    <input type="hidden" name="_captcha" value="false">
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Naam</label>
+                                            <input type="text" name="name" class="form-control custom-input" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Telefoonnummer</label>
+                                            <input type="tel" name="phone" class="form-control custom-input">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Email adres</label>
+                                            <input type="email" name="email" class="form-control custom-input" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Jouw bericht</label>
+                                            <textarea name="message" class="form-control custom-input" rows="4"
+                                                placeholder="Bijv: Ik zoek oppas voor aanstaande zaterdag..."
+                                                required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn-custom w-100 border-0">Verstuur
+                                                bericht</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
+
                         </div>
-
-                        <div class="col-md-7 p-5 bg-white rounded-end">
-                            <h3 class="text-dark mb-4">Stuur een bericht</h3>
-                            
-                            <form action="https://formsubmit.co/oppas@maudtimmers.com" method="POST">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Naam</label>
-                                        <input type="text" name="name" class="form-control custom-input" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Telefoonnummer</label>
-                                        <input type="tel" name="phone" class="form-control custom-input">
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="form-label">Email adres</label>
-                                        <input type="email" name="email" class="form-control custom-input" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="form-label">Jouw bericht</label>
-                                        <textarea name="message" class="form-control custom-input" rows="4" placeholder="Bijv: Ik zoek oppas voor aanstaande zaterdag..." required></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn-custom w-100 border-0">Verstuur bericht</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <footer id="contact">
+    <footer id="footer-simple">
         <div class="container text-center">
-            <h2 class="mb-4">Contact</h2>
-            <p class="mb-5 contact-intro">Wil je een oppasavond plannen? Stuur me gerust een berichtje.</p>
-            
-            <div class="contact-links d-flex justify-content-center flex-wrap gap-4 mb-5">
-                <a href="https://wa.me/31646471139" class="contact-item">📱 +31 6 46471139</a>
-                <a href="mailto:Maudtimmers7@gmail.com" class="contact-item">📧 Maudtimmers7@gmail.com</a>
-            </div>
-            <p class="copyright">&copy; 2024 Maud Timmers - Dreumel</p>
+            <p class="mb-0">&copy; 2024 Maud Timmers - Dreumel</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
