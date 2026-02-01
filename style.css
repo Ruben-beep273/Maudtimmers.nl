@@ -61,16 +61,24 @@ body {
 /* --- Hero Sectie --- */
 #hero {
     min-height: 65vh;
-    /* Foto met overlay */
-    background: linear-gradient(rgba(26,60,52,0.8), rgba(26,60,52,0.8)), url('https://static.vecteezy.com/system/resources/thumbnails/049/001/223/small/the-serene-ocean-under-a-mesmerizing-sunset-sky-painted-in-pink-and-turquoise-creates-a-tranquil-atmosphere-photo.jpg#/?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: var(--white);
     margin-top: 70px; /* Ruimte voor de fixed navbar */
 }
+/*Slidehow*/
+.bg-1 {
+    background: linear-gradient(rgba(26,60,52,0.8), rgba(26,60,52,0.8)), 
+                url("Afbeeldingen/MaudAloLes.jpeg");
+}
+
+.bg-2 {
+    background: linear-gradient(rgba(26,60,52,0.8), rgba(26,60,52,0.8)), 
+                url("Afbeeldingen/MaudPaboLes.jpeg");
+}
+
 
 #hero h1 {
     font-weight: 700;
@@ -416,3 +424,4 @@ footer#footer-simple {
         border-radius: 15px;
     }
 }
+

@@ -129,3 +129,20 @@ if (contactForm) {
         });
     });
 }
+
+// SLideshow in Hero
+const Hero = document.getElementById('hero');
+const array_bg = ["bg-1", "bg-2"];
+
+let index = 0;
+
+function VeranderAchtergrond(){
+    Hero.classList.remove(array_bg[index]);
+    
+    index = (index + 1) % array_bg.length;
+
+    Hero.classList.add(array_bg[index])
+
+}
+setInterval(VeranderAchtergrond, 10000);
+
